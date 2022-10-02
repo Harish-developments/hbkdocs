@@ -1,0 +1,50 @@
+body{
+    padding-right : 10px;
+    padding-left: 10px;
+}
+
+.developer-detail-section{
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+}
+
+.developer-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width : 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.developer-card:hover{
+    opacity: 0.6;
+}
+.developer-card:active{
+    opacity: 0.3;
+}
+.developer-card-image img{
+    width : 70px;
+    margin : 15px;
+}
+.developer-card-details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.developer-card-details p{
+    font-weight: bold;
+    font-size: 14px;
+}
+.developer-card-details span{
+    color: rgb(149, 147, 147);
+    font-size: 12px;
+}
+
+header{
+    padding : 10px;
+}
+
+.document-section{
+    padding-left : 40px;
+}
