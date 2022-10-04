@@ -1,0 +1,31 @@
+body{
+    margin : 0px;
+    padding-left : 20px;
+    margin-right: 20px;
+}
+
+.props-list-details ul{
+    display: grid;
+    background-color: rgb(244, 244, 244);
+    grid-template-columns: repeat(3,1fr);
+    padding : 20px;
+
+}
+.props-list-details p{
+    font-size: 20px;
+}
+.props-list-details li{
+    margin-bottom : 20px;
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+.example-section div div{
+    display: flex;
+    background-color:rgb(244,244,244);
+    justify-content: flex-start;
+}
+
+.example-section div div pre{
+    font-size: 15px;
+}

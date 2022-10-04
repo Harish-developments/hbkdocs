@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common_props.html.css">
+</head>
+<body>
+    <div class = "main-view-button">
+
+        <div class = "props-list-details">
+            <h1>Comman properties</h1>
+            <hr>
+            <p>
+                Comman properties are properties that are common for all native components.
+                The fallowing table show all the common properties that you can use in a component.
+            </p>
+            <h2>Common property table</h2>
+            <ul>
+                <li>bgColor</li>
+                <li>color</li>
+                <li>padding</li>
+                <li>paddingTop</li>
+                <li>paddingBottom</li>
+                <li>paddingRight</li>
+                <li>paddingLeft</li>
+                <li>margin</li>
+                <li>marginTop</li>
+                <li>marginBottom</li>
+                <li>marginRight</li>
+                <li>marginLeft</li>
+                <li>border</li>
+                <li>borderRadius</li>
+                <li>borderWidth</li>
+                <li>borderColor</li>
+                <li>borderTopColor</li>
+                <li>borderRightColor</li>
+                <li>borderLeftColor</li>
+                <li>borderBottomColor</li>
+                <li>topWidth</li>
+                <li>bottomWidth</li>
+                <li>rightWidth</li>
+                <li>leftWidth</li>
+                <li>shadow</li>
+                <li>topLeftRadius</li>
+                <li>topRightRadius</li>
+                <li>bottomRightRadius</li>
+                <li>bottomLeftRadius</li>
+                <li>textSize</li>
+                <li>textStyle</li>
+                <li>textBoldness</li>
+                <li>radius</li>
+                <li>sizeX</li>
+                <li>sizeY</li>
+                <li>posMode</li>
+                <li>align</li>
+                <li>alignX</li>
+                <li>alignY</li>
+                <li>opacity</li>
+                <li>justify</li>
+            </ul>
+            <div class = "example-section">
+                <div>
+                    <h3>Button props</h3>
+                    <hr>
+                    <p>
+                        button component has only two props , name and text. The remaining props comes from the comman prop.
+                    </p>
+                    <div>
+                        <pre>
+    from hbk import *
+    
+    homeScreen = Screen()
+    homeScreen.addComponent([
+        Button('click',bgColor = 'red'),
+    ])
+    
+    Html('example.html',homeScreen).save()
+                        </pre>
+                    </div>
+                    <h4>Button props values</h4>
+                    <p><strong>color</strong>  and <strong>bgColor </strong>values are same.
+                        you can directly pass the name of the color , hexadecimal , rgba values</p>
+                    <h4>Example</h4>
+                    <div>
+                        <pre>
+    from hbk import *
+
+    homepage = Screen()
+    homepage.addComponent([
+            Button(bgColor = 'black' , color = 'white')
+    ])
+                    </pre>
+                    </div>
+                    <p><b>radius</b> props can be used to modify the radius of the button.we have the fallowing props as well</p>
+                    <ol>
+                        <li>1. <b>topLeftRadius</b></li>
+                        <li>2. <b>topRightRadius</b></li>
+                        <li>3. <b>bottomLeftRadius</b></li>
+                        <li>4. <b>bottomRightRadius</b></li>
+                    </ol>
+                    <h4>Example</h4>
+                    <div>
+                        <pre>
+    from hbk import *
+
+    homepage = Screen()
+    homepage.addComponent([
+            Button(radius = '10px');
+    ])
+
+    Html('example.html',homepage).save()
+                        </pre>
+                        <p>Note : radius works only if you use the units link 'px'.<a href = "#">for more info check</a></p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Image props</h3>
+                    <hr>
+                    <p>
+                        Image component has only two props , name and source. the remaining props comes form the comman prop.
+                    </p>
+                    <div>
+                        <pre>
+    from hbk import *
+    
+    homeScreen = Screen()
+    homeScreen.addComponent([
+        Image('image-name'),
+    ])
+    
+    Html('example.html',homeScreen).save()
+                        </pre>
+                    </div>
+                </div>
+                <div>
+                    <h3>BoxLayout props</h3>
+                    <hr>
+                    <p>
+                        Boxlayout has no specific props , all comman props can be used by button component.
+                    </p>
+                    <div>
+                         <pre>
+    from hbk import *
+    
+    homeScreen = Screen()
+
+    card = BoxLayout([
+        Input('username : '),
+        Input('password :'),
+        Button('Login'),
+    ])
+
+    homeScreen.addComponent([card])
+    
+    Html('example.html',homeScreen).save()
+                        </pre>
+                    </div>
+                </div>
+                <div>
+                    <h3>GirdLayout props</h3>
+                    <hr>
+                    <p>
+                        GridLayout has no specific props , all comman props can be used by gridlayout component.
+                    </p>
+                    <div>
+                        <pre>
+    from hbk import *
+    
+    homeScreen = Screen()
+
+    gallery = GridLayout([
+         Image('image-1-name'),
+         Image('image-2-name'),
+         Image('image-3-name'),
+    ])
+
+    homeScreen.addComponent([gallery])
+    
+    Html('example.html',homeScreen).save()
+                        </pre>
+                    </div>
+                </div>
+                <div>
+                    <h3>Input props</h3>
+                    <p>
+                        Input has one specific prop 'placeHolder' , all comman props can be used by input component.
+                    </p>
+                    <div>
+                        <pre>
+    from hbk import *
+    
+    homeScreen = Screen()
+
+    homeScreen.addComponent([
+            Input('Username :'),
+            Input("Password : "),
+            Button("Login"),
+    ])
+    
+    Html('example.html',homeScreen).save()
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
